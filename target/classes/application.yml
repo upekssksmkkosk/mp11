@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.p6spy.engine.spy.P6SpyDriver
+    url: jdbc:p6spy:h2:mem:test
+    username: root
+    password: admin
+mybatis-plus:
+  global-config:
+    banner: true
+    db-config:
+      table-prefix: t_
+      logic-delete-field: staus
+      logic-not-delete-value: 1
+      logic-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    default-enum-type-handler: org.apache.ibatis.type.EnumOrdinalTypeHandler
+  type-enums-package: com.tong.mp1.enums
