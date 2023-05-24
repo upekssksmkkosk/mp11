@@ -15,4 +15,7 @@ import java.util.List;
 public interface usermapper  extends BaseMapper<user> {
    user selectuserbyname(String name);
    IPage<user> selectbyname(IPage<user> userIPage,String name);
+   /**
+    * 我写的一个文件
+    */
 }
